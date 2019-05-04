@@ -10,9 +10,9 @@ public class Conta {
 	 * O número da conta.
 	 */
 	private String numero;
-	
+
 	/**
-	 * O valor contido na conta. 
+	 * O valor contido na conta.
 	 */
 	private double saldo;
 
@@ -28,16 +28,15 @@ public class Conta {
 		this.saldo = 0;
 
 	}
-	
+
 	public double GetSaldo() {
-		
+
 		return this.saldo;
 	}
 
-	
-
 	/**
-	 *  metodo para sacar
+	 * metodo para sacar
+	 * 
 	 * @param valor
 	 */
 	public void sacar(double valor) {
@@ -46,14 +45,21 @@ public class Conta {
 	}
 
 	/**
-	 *  metodo para depositar
+	 * metodo para depositar
+	 * 
 	 * @param valor
 	 */
 	public void depositar(double valor) {
 		this.saldo = this.saldo + valor;
 
 	}
-	
-	
+
+	public Agencia getAgencia() {
+		return this.agencia;
+	}
+
+	public String getNumero() {
+		return this.numero;
+	}
 
 }
