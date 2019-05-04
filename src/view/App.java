@@ -20,6 +20,8 @@ public class App {
 		System.out.println("Nome: " + cli.getNome() + " Numero Agencia: " + cli.getConta().get(0).getNumero());
 		cli.addConta(conta1);
 		System.out.println("Nome: " + cli.getNome() + " Numero Agencia: " + cli.getConta().get(1).getNumero());
+		conta1.depositar(20);
+		conta1.sacar(30);
 	}
 
 }

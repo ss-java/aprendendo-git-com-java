@@ -40,7 +40,12 @@ public class Conta {
 	 * @param valor
 	 */
 	public void sacar(double valor) {
-		this.saldo = this.saldo - valor;
+		if (this.checaSaldo(valor)) {
+			this.saldo = this.saldo - valor;
+			System.out.println("Saldo suficiente! Saldo atual:" + this.saldo);
+		}else {
+			System.out.println("Saldo insuficiente.");
+		}
 
 	}
 
@@ -60,6 +65,17 @@ public class Conta {
 
 	public String getNumero() {
 		return this.numero;
+	}
+
+	/**
+	 * Metodo de checagem de saldo
+	 */
+
+	public boolean checaSaldo(double saque) {
+		if (this.saldo > saque) {
+			return true;
+		}
+		return false;
 	}
 
 }
