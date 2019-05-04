@@ -1,5 +1,7 @@
 package model;
 
+import java.util.ArrayList;
+
 public class Cliente {
 	/**
 	 * O nome do cliente.
@@ -15,7 +17,7 @@ public class Cliente {
 	/**
 	 * A conta do cliente.
 	 */
-	private Conta conta;
+	private ArrayList<Conta> contas = new ArrayList<>();
 	
 	/**
 	 * Construtor.
@@ -24,8 +26,20 @@ public class Cliente {
 	 * @param sobrenome
 	 */
 	public Cliente(Conta conta, String nome, String sobrenome) {
-		this.conta = conta;
+		this.addConta(conta);
 		this.nome = nome;
 		this.sobrenome = sobrenome;
+	}
+	
+	public ArrayList<Conta> getConta() {
+		return this.contas;
+	}
+	
+	public String getNome() {
+		return this.nome;
+	}
+	
+	public void addConta(Conta conta) {
+		this.contas.add(conta);
 	}
 }

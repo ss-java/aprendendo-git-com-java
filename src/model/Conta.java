@@ -21,4 +21,12 @@ public class Conta {
 		this.agencia = agencia;
 		this.numero = numero;
 	}
+	
+	public Agencia getAgencia() {
+		return this.agencia;
+	}
+	
+	public String getNumero() {
+		return this.numero;
+	}
 }
