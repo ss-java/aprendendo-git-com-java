@@ -72,7 +72,7 @@ public class Conta {
 	 */
 
 	public boolean checaSaldo(double saque) {
-		if (this.saldo > saque) {
+		if (this.saldo >= saque) {
 			return true;
 		}
 		return false;
